@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-nightly-only:
+    name: Build nightly only
+    runs-on: ubuntu-latest
+    container: quay.io/pypa/manylinux2014_x86_64
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install nightly rust
+        run: curl --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly
+      # Insert steps here to install you other dependencies. Note that you're running inside of cent os 7, not ubuntu
+      - name: Build
+        run: |
+          source $HOME/.cargo/env
+          for PYBIN in /opt/python/cp3[6789]*/bin; do
+            "${PYBIN}/pip" install maturin
+            "${PYBIN}/maturin" build -m nightly-only/Cargo.toml -i "${PYBIN}/python" --release --manylinux 2014
+          done

@@ -30,6 +30,20 @@ maturin develop
 python py_tests/tests.py
 ```
 
+# Releases 
+
+Keep git tags up to date with each version, with latest being the head of main.
+
+Check if it works with this: 
+```
+docker run --rm -v $(pwd):/io konstin2/maturin build --release 
+```
+
+Publish  with this: 
+```
+docker run --rm -v $(pwd):/io konstin2/maturin publish 
+```
+
 # Contributions
 
 File a ticket or send a PR if you'd like. 
@@ -40,6 +54,7 @@ File a ticket or send a PR if you'd like.
   - Write documentation and put them somewhere 
   - branch protection for main, no direct writes only PR's
   - automated tests 
+  - add git tags in for versions and latest 
 * Crawl-delay parsing and restructuring of the data representation. 
 * Be able to detect whether a crawler can access a specific page.
 * More tests of all the various edge cases. 
