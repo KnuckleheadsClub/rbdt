@@ -1,12 +1,12 @@
 [package]
 name = "rbdt"
-version = "0.0.3-alpha2"
+version = "0.0.3-alpha3"
 edition = "2018"
 readme = "Readme.md"
 homepage = "https://knuckleheads.club"
 repository = "https://github.com/KnuckleheadsClub/rbdt"
 license = "MIT"
-description = " A python library (written in rust) for large scale batch analysis of robots.txt files "
+description = "rbdt is a python library (written in rust) for parsing robots.txt files for large scale batch processing."
 keywords = [ "python", "rust", "parser", "robots.txt", "robots-txt"]
 
 [lib]

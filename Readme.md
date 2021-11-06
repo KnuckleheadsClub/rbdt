@@ -6,7 +6,7 @@ _rbdt is a work in progress, currently being extracted out of another (private) 
 
 🚨🚨🚨🚨
 
-rbdt is a python library (written in rust) that parses robots.txt files.
+rbdt is a python library (written in rust) for parsing robots.txt files for large scale batch processing.
 
 [![PyPI version](https://badge.fury.io/py/rbdt.svg)](https://badge.fury.io/py/rbdt)
 
