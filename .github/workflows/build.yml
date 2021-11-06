@@ -7,8 +7,8 @@ on:
   pull_request:
 
 jobs:
-  build-nightly-only:
-    name: Build nightly only
+  build-and-publish:
+    name: Build & Publish 
     runs-on: ubuntu-latest
     container: quay.io/pypa/manylinux2014_x86_64
     steps:
@@ -23,6 +23,10 @@ jobs:
             "${PYBIN}/pip" install maturin
             "${PYBIN}/maturin" build -m Cargo.toml -i "${PYBIN}/python" --release --manylinux 2014
           done
+      - name: Move files around 
+        run: |
+          mv /__w/rbdt/rbdt/target/wheels/* dist/
+        done
       - name: Publish distribution 📦 to Test PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
