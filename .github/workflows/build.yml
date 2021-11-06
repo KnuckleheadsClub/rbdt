@@ -25,6 +25,7 @@ jobs:
           done
       - name: Move files around 
         run: |
+          mkdir dist
           mv /__w/rbdt/rbdt/target/wheels/* dist/
       - name: Publish distribution 📦 to Test PyPI
         uses: pypa/gh-action-pypi-publish@master
