@@ -1,6 +1,10 @@
 # rbdt - Robots.txt Parser
 
-🚨_rbdt is a work in progress, currently being extracted out of another (private) project for the purpose of open sourcing and better software engineering._🚨
+🚨🚨🚨🚨
+
+_rbdt is a work in progress, currently being extracted out of another (private) project for the purpose of open sourcing and better software engineering._ 
+
+🚨🚨🚨🚨
 
 rbdt is a python library written in rust that parses robots.txt files.
 
