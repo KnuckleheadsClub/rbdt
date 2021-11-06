@@ -23,16 +23,23 @@ jobs:
             "${PYBIN}/pip" install maturin
             "${PYBIN}/maturin" build -m Cargo.toml -i "${PYBIN}/python" --release --manylinux 2014
           done
+      - name: Test the thing
+        run: |
+          source $HOME/.cargo/env
+          for PYBIN in /opt/python/cp3[6789]*/bin; do
+            "${PYBIN}/maturin" develop -m Cargo.toml -i "${PYBIN}/python" 
+            python py_tests/tests.py
+          done
       - name: Publish distribution 📦 to Test PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
-          custom_dir: /__w/rbdt/rbdt/target/wheels/
+          packages_dir: /__w/rbdt/rbdt/target/wheels/
           skip_existing: true
       - name: Publish distribution 📦 to PyPI
         if: startsWith(github.ref, 'refs/tags')
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-          custom_dir: /__w/rbdt/rbdt/target/wheels/
+          packages_dir: /__w/rbdt/rbdt/target/wheels/
