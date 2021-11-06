@@ -8,6 +8,8 @@ _rbdt is a work in progress, currently being extracted out of another (private) 
 
 rbdt is a python library written in rust that parses robots.txt files.
 
+[![PyPI version](https://badge.fury.io/py/rbdt.svg)](https://badge.fury.io/py/rbdt)
+
 rbdt features: 
 * MIT license, have fun. 
 * Written in Rust, so it is fast. 
@@ -34,8 +36,6 @@ File a ticket or send a PR if you'd like.
 
 # To Do 
 * Real Open Sourcing Hours
-  - Get it up on pypi 
-  - Versions 
   - Changelog 
   - Write documentation and put them somewhere 
 * Crawl-delay parsing and restructuring of the data representation. 
