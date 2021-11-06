@@ -1,4 +1,4 @@
-# rbdt - Robots.txt Parser
+# rbdt 
 
 🚨🚨🚨🚨
 
@@ -38,6 +38,8 @@ File a ticket or send a PR if you'd like.
 * Real Open Sourcing Hours
   - Changelog 
   - Write documentation and put them somewhere 
+  - branch protection for main, no direct writes only PR's
+  - automated tests 
 * Crawl-delay parsing and restructuring of the data representation. 
 * Be able to detect whether a crawler can access a specific page.
 * More tests of all the various edge cases. 

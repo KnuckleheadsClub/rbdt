@@ -6,7 +6,7 @@ readme = "Readme.md"
 homepage = "https://knuckleheads.club"
 repository = "https://github.com/KnuckleheadsClub/rbdt"
 license = "MIT"
-description = " A python library (written in rust) meant for large scale batch analysis of robots.txt files "
+description = " A python library (written in rust) for large scale batch analysis of robots.txt files "
 keywords = [ "python", "rust", "parser", "robots.txt", "robots-txt"]
 
 [lib]
