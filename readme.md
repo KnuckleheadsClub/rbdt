@@ -37,7 +37,7 @@ File a ticket or send a PR if you'd like.
   - Get it up on pypi 
   - Versions 
   - Changelog 
-** Write documentation and put them somewhere 
+  - Write documentation and put them somewhere 
 * Crawl-delay parsing and restructuring of the data representation. 
 * Be able to detect whether a crawler can access a specific page.
 * More tests of all the various edge cases. 
