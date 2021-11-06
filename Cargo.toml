@@ -1,11 +1,13 @@
 [package]
 name = "rbdt"
-version = "0.0.2-alpha1"
+version = "0.0.3-alpha1"
 edition = "2018"
 readme = "Readme.md"
-homepage = "https://github.com/pyo3/maturin"
-repository = "https://github.com/pyo3/maturin"
+homepage = "https://knuckleheads.club"
+repository = "https://github.com/KnuckleheadsClub/rbdt"
 license = "MIT"
+description = " A python library (written in rust) meant for large scale batch analysis of robots.txt files "
+keywords = [ "python", "rust", "parser", "robots.txt", "robots-txt"]
 
 [lib]
 name = "rbdt"
@@ -13,7 +15,6 @@ name = "rbdt"
 #
 # Downstream Rust code (including code in `bin/`, `examples/`, and `tests/`) will not be able
 # to `use string_sum;` unless the "rlib" or "lib" crate type is also included, e.g.:
-# crate-type = ["cdylib", "rlib"]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]

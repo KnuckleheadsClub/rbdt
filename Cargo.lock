@@ -333,7 +333,7 @@ dependencies = [
 
 [[package]]
 name = "rbdt"
-version = "0.0.2-alpha1"
+version = "0.0.3-alpha1"
 dependencies = [
  "deunicode",
  "itertools",
