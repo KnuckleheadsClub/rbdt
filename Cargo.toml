@@ -1,6 +1,6 @@
 [package]
 name = "rbdt"
-version = "0.0.3"
+version = "0.0.4-alpha1"
 edition = "2018"
 readme = "Readme.md"
 homepage = "https://knuckleheads.club"
