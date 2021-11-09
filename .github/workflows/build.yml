@@ -1,6 +1,6 @@
 name: Publish Python 🐍 distributions 📦 to PyPI and TestPyPi
 
-on: [push, pull_request]
+on: [workflow_dispatch]
 
 jobs:
   build-and-publish:
@@ -34,7 +34,6 @@ jobs:
           packages_dir: target/wheels/
           skip_existing: true
       - name: Publish distribution 📦 to PyPI
-        if: startsWith(github.ref, 'refs/tags')
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
